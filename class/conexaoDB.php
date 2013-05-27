@@ -12,6 +12,9 @@
  */
 class conexaoDB {    
     
+    static  public $query;
+
+
     public function __construct() {
        
         //abrindo conexao
@@ -27,7 +30,12 @@ class conexaoDB {
          mysql_connect('localhost', 'root', '');
          mysql_select_db("aprendizado");
     }
-    
+    static  public function executaQuery ($query= self::query)
+    {
+          mysql_query($query);
+          mysql_affected_rows();
+    }
+
     //fechando conexao
     public function __destruct() {
         mysql_close();
