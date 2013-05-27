@@ -33,11 +33,11 @@ class Escola {
     //grava na base de dados
     function  cadastraEscola()
     {
-        include_once 'class/conexaoDB.php';
-        $con = new conexaoDB;
-        $con->abrirConexao();
+        //incluindo class de conexao
+       include_once 'class/conexaoDB.php';        
         $query = "INSERT INTO escola values (".$this->inep . ",'". $this->nomeEscola."')";
-        echo $query;
+        //usando metodo estatico para que não tenha necessidade de instanciar a class
+        conexaoDB::abrirConexao();
         mysql_query($query);
         mysql_affected_rows();
         
