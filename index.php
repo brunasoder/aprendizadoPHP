@@ -6,30 +6,11 @@
     </head>
     <body>
         <?php
-              /* class Pessoa
-                {
-                    public $nome;
-                    
-                    function falar()
-                    {
-                        echo "Falva seu ". $this->nome;
-                    }
-                    
-                    function  setNome($novoNome)
-                    {
-                        $this->nome = $novoNome;
-                    }
-                }
-                
-                $obj = new Pessoa();
-                
-                $obj->setNome("haaaaaaaaaaaaaaaaa");
-                $obj->falar();*/
         //manipulando array
         $pessoa =  array(
-                                            'Marina'=>  array('cabelo'=>'loiro', 'sexo'=>'MUE', 'formacao'=>'superior'),
-                                            'Danielle'=>array('cabelo'=>'Moreno','sexo'=>'mue'),
-                                            'Fernando'=>array('cabelo'=>'Enrolado','sexo'=>'so deus sabe')
+                                            'Marina'=>  array('cabelo'=>'loiro', 'sexo'=>'Mulher', 'formacao'=>'superior'),
+                                            'Danielle'=>array('cabelo'=>'Moreno','sexo'=>'Mulher'),
+                                            'Fernando'=>array('cabelo'=>'Enrolado','sexo'=>'Homen')
                                     );
         //imprimi a estrutura do array
         var_dump($pessoa);
@@ -42,14 +23,7 @@
                             echo "$caracteristicas -> $valor <br>";
                         }
                         echo "<br><br>";
-                    }
-        
-        //momento idiota pra descontrair repetindo maozinha levantanda
-        $mao = '-o-  \o-  \o/  -o/  -o-  ';
-        //print str_repeat($mao, 50);
-        
-        
-        
+                    }    
         //includndo a class
         include_once 'class/Escola.php';
         include_once 'class/Aluno.php';
