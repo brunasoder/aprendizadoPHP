@@ -29,8 +29,8 @@
         include_once 'class/Aluno.php';
         //criando objetodas classes
         $Educacao = new Escola();
-        $Educacao->setNomeEscola("E.E MARIA CLARA DE OLIVEIRA - 6");
-        $Educacao->setInep(8900);
+        $Educacao->setNomeEscola("E.E MARIA CLARA DE OLIVEIRA");
+        $Educacao->setInep(8920);
         
         echo $Educacao->inep;
         echo $Educacao->nomeEscola;

@@ -16,7 +16,7 @@ class conexaoDB {
 
 
     public function __construct() {
-       
+        mysql_select_db('aprendizado');
         //abrindo conexao
      //   $this->conexao = mysql_connect('localhost', 'root', '');
         //selecionado banco de dados que sera utilizado
@@ -24,18 +24,11 @@ class conexaoDB {
     }
     
     //retornando configuração para acessar banco
-    static public function  abrirConexao()
+    public function  abrirConexao()
     {
-         mysql_select_db('aprendizado');
          mysql_connect('localhost', 'root', '');
          mysql_select_db("aprendizado");
     }
-    static  public function executaQuery ($query= self::query)
-    {
-          mysql_query($query);
-          mysql_affected_rows();
-    }
-
     //fechando conexao
     public function __destruct() {
         mysql_close();
