@@ -8,7 +8,7 @@
 /**
  * Description of ContaBancaria
  *
- * @author Fernando
+ * @author Zyon
  */
 include_once 'interface/IContaBancaria.php';
 abstract class ContaBancaria implements IContaBancaria {

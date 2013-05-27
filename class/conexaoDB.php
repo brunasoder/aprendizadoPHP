@@ -8,7 +8,7 @@
 /**
  * Description of conexaoDB
  *
- * @author Fernando
+ * @author Zyon
  */
 class conexaoDB {    
     

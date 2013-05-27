@@ -41,48 +41,6 @@
         $aluno->setNome("   Fernandodinhooo   -   ");
         echo  $aluno->toString();
         
-        
-          //variavel que não pode ter valor alterado na execução do codigo
-        define("MAXIMO_CLIENTE", 100);
-        //echo MAXIMO_CLIENTE;
-        
-        //exemplo de função
-        function soma($valor1, $valor2)
-        {
-            $total =  $valor1 + $valor2;
-            return $total;
-        }
-        
-       // echo soma(20, 30);
-       
-        //valores globa
-       // $totalDeInstrucao =2;
-        
-        
-       function contador()
-       {
-           static $valor;
-           $valor += 1;
-         //  echo $valor; 
-       }
-
-
-       for($i =0; $i < 7; $i++)
-        {
-           contador();
-            
-        }
-    //    echo $totalDeInstrucao;
-        
-        //foreach
-       // $listaNome = array('Zyaonnnn', 'Nanda', 'Fefito', 'Jechhh');
-        
-        /*foreach ($listaNome as $item)
-        {
-            //print "- $item";
-        }*/
-        
-        
         ?>
         
         

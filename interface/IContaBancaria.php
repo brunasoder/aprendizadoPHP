@@ -7,11 +7,12 @@
 
 /**
  *
- * @author Fernando
+ * @author Zyon Dias
  */
 interface IContaBancaria {
     //put your code here
     
+    //metodos que deveram ser implementados 
     function depositar($valor);
     function  sacar($valor);
     function mostraSaldo();
