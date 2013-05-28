@@ -6,19 +6,12 @@
         <title></title>
     </head>
     <body>
-        <form >
-            <label>Full name:</label>
-            <input type="text" id="full_name" name="full_name" placeholder="Jane Doe" required>
+        <form id="formEscola" name="formEscola" method="post" action="" >
+            <label>Nome da Escola:</label>
+            <input type="text" id="nomEscola" name="nomEscola" placeholder="E.E Sebastião Morais Cardoso" required>
 
-            <label>Email address:</label>
-            <input type="email" id="email_addr" name="email_addr" required>
-
-            <label>Repeat email address:</label>
-            <input type="email" id="email_addr_repeat" name="email_addr_repeat" required 
-                   oninput="check(this)">
-
-           <!-- <label>Arrival date:</label>
-            <input type="date" id="arrival_dt" name="arrival_dt" required>-->
+            <label>Numero do INEP:</label>
+            <input type="number" id="inepe" name="inepe" required>
 
             <input type="submit" value="Gravar" /> 
         </form>
@@ -33,24 +26,29 @@
                 }
             }
         </script>
+        
 
         <?php
+        //verificando quendo tiver um post na pagina
+        if(isset($_SERVER['REQUEST_METHOD']) and ($_SERVER['REQUEST_METHOD'] == 'POST'))
+        {
+            //estraindo itens enviado do formulario
+            extract($_POST);                        
         //includndo a class
         include_once 'class/Escola.php';
         include_once 'class/Aluno.php';
-        //criando objetodas classes
+        //criando objetod aparti do formualrio
         $Educacao = new Escola();
-        $Educacao->setNomeEscola("E.E MARIA CLARA DE OLIVEIRA");
-        $Educacao->setInep(8920);
-
-        echo $Educacao->inep;
-        echo $Educacao->nomeEscola;
-
+        $Educacao->setNomeEscola($nomEscola);
+        $Educacao->setInep($inepe);
+          //persistindo no banco de dados
         $Educacao->cadastraEscola();
 
-        $aluno = new Aluno($Educacao);
-        $aluno->setNome("   Fernandodinhooo   -   ");
-        echo $aluno->toString();
+     
+        }
+         //$aluno = new Aluno($Educacao);
+        //$aluno->setNome("   Fernandodinhooo   -   ");
+        //echo $aluno->toString();
         ?>
 
 
