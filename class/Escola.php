@@ -34,10 +34,11 @@ class Escola {
     function  cadastraEscola()
     {
         include_once 'class/conexaoDB.php';
-        $con = new conexaoDB;
-        $con->abrirConexao();
+        //$con = new conexaoDB;
+        //$con->abrirConexao();
         $query = "INSERT INTO escola values (".$this->inep . ",'". $this->nomeEscola."')";
         echo $query;
+        conexaoDB::abrirConexao();
         mysql_query($query);
         mysql_affected_rows();
         
