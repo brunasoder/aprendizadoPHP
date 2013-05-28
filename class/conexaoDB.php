@@ -11,18 +11,7 @@
  * @author Zyon
  */
 class conexaoDB {    
-    
-    static  public $query;
-
-
-    public function __construct() {
-     //   mysql_select_db('aprendizado');
-        //abrindo conexao
-     //   $this->conexao = mysql_connect('localhost', 'root', '');
-        //selecionado banco de dados que sera utilizado
-        //mysql_select_db('aprendizado', $this->conexao);
-    }
-    
+        
     //retornando configuração para acessar banco
    static public function  abrirConexao()
     {
@@ -30,9 +19,14 @@ class conexaoDB {
          mysql_connect('localhost', 'root', '');
          mysql_select_db("aprendizado");
     }
-    //fechando conexao
-    public function __destruct() {
-        mysql_close();
+    
+    //metodo para executando query que não retorna valor ou seja não é select
+    static  public function  executaQury($query)
+    {
+        mysql_query($query);
+        mysql_affected_rows();
+       //fechando conexao
+       mysql_close();
     }
 }
 
