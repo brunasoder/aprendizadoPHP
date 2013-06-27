@@ -31,8 +31,6 @@
         $Educacao->setInep($inepe);
           //persistindo no banco de dados
         $Educacao->cadastraEscola();
-
-     
         }
          //$aluno = new Aluno($Educacao);
         //$aluno->setNome("   Fernandodinhooo   -   ");
